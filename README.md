@@ -1,13 +1,37 @@
-# Docker Node.js Sample Project
+# Docker Node.js Sample
 
-Dies ist eine Beispielanwendung für Node.js, die in einem Docker-Container läuft.
+Eine einfache Node.js-Anwendung, die in einem Docker-Container läuft.
 
 ## Installation
 
-### 1. Klonen des Repositories
+1. **Repository klonen:**
+   ```bash
+   git clone https://github.com/username/docker-nodejs-sample.git
+   cd docker-nodejs-sample
+   ```
 
-Öffne dein Terminal und klone das Repository:
+2. **Notwendige Pakete installieren:**
+   ```bash
+   npm install
+   ```
 
+3. **Docker-Image erstellen:**
+   ```bash
+   docker build -t docker-nodejs-sample .
+   ```
+
+4. **Container starten:**
+   ```bash
+   docker run -p 3000:3000 docker-nodejs-sample
+   ```
+
+Jetzt ist die Anwendung unter `http://localhost:3000` erreichbar.
+
+## Nutzung von Git
+
+Um Änderungen zu speichern:
 ```bash
-git clone https://github.com/deinBenutzername/docker-nodejs-sample.git
+git add .
+git commit -m "Änderungskommentar"
+git push origin main
 ```
